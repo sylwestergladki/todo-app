@@ -1,0 +1,150 @@
+@import "_normalize";
+@import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Ruda&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #000;
+  background: #D0E2C7;
+  font-family: 'Ruda';
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+  &-title{
+    font-size: 36px;
+  }
+
+  &-todo{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    &__label{
+      font-size: 30px;
+      display: block;
+      margin: 0 0 22px 0;
+      text-align: center;
+    }
+
+    &__element{
+      background-color: #ffffff ;
+      width: 300px;
+      height: 40px;
+      display: flex;
+      justify-content: flex-end;
+      box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+      border-radius: 3px;
+      margin-bottom: 15px;
+      &-text{
+        text-align: left;
+        align-self: center;
+        width: 100%;
+        margin: 0;
+        padding-left: 10px;
+      }
+      
+      &-undone{
+        width: 40px;
+        height: 40px;
+        background-color: #F01A1C;
+        border: none;
+        margin: 0;
+      }
+
+      &-done{
+        width: 40px;
+        height: 40px;
+        background-color: #89F297;
+        border: none;
+        margin: 0;
+        border-radius: 0 3px 3px 0;
+      }
+    }
+  }
+
+  &-done{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    &__label{
+      font-size: 30px;
+      display: block;
+      margin: 111px 0 22px 0;
+      text-align: center;
+    }
+
+    &__element{
+      background-color: #ffffff ;
+      width: 300px;
+      height: 40px;
+      display: flex;
+      justify-content: flex-end;
+      box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+      border-radius: 3px;
+
+      
+
+      &-remove{
+        width: 40px;
+        height: 40px;
+        background-color: #F01A1C;
+        border: none;
+        margin: 0;
+        border-radius: 0 3px 3px 0;
+      }
+    }
+  }
+
+  &-task{
+    margin-top: 100px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    &__title{
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 22px;
+    }
+
+    &__label{
+      width: 300px;
+      height: 40px;
+      display: flex;
+      box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+      &-input{
+        height: 40px;
+        width: 260px;
+        border: none;
+        border-radius: 3px 0 0 3px;
+      }
+      &-button{
+        width: 40px;
+        height: 40px;
+        background-color: #89F297;
+        border: none;
+        margin: 0;
+        border-radius: 0 3px 3px 0;
+      }
+    }
+
+    
+
+  }
+  
+}
