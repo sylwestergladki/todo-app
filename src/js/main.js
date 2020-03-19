@@ -26,20 +26,24 @@ const addTask = () => {
  
 };
 
-function doneTask(e){
+function removeTask(e){
     let element = e.target;
-    if(element.classList.contains("container-todo__element-done")){
-        console.log(element.parentNode.firstChild.innerHTML);
-        
+    if(element.classList.contains("container-todo__element-undone")){
         element.parentNode.remove();
     }
+}
 
+function doneTask(e){
+  let element = e.target;
+  if(element.classList.contains("container-todo__element-done")){
+        console.log(element.parentNode)
+  }
 }
 
 
 addButton.addEventListener("click", addTask);
-
-document.addEventListener( "click", doneTask );
+document.addEventListener( "click", removeTask );
+document.addEventListener("click",doneTask);
 
 
 
