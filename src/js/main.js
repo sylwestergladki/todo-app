@@ -36,7 +36,7 @@ function removeTask(e){
 function doneTask(e){
   let element = e.target;
   if(element.classList.contains("container-todo__element-done")){
-        console.log(element.parentNode)
+      element.parentNode.childNodes[1].style.textDecoration="line-through";
   }
 }
 
